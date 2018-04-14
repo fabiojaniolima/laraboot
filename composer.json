@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "fabiojaniolima/laravel-boot",
+    "description": "Um ponto de partida para seus projetos baseados no Laravel Framework.",
+    "keywords": ["framework", "laravel", "laraboot"],
     "license": "MIT",
     "type": "project",
     "require": {
