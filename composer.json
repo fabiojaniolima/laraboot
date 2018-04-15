@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "fabiojaniolima/laraboot",
+    "description": "Um ponto de partida para seus projetos baseados no Laravel Framework.",
+    "keywords": ["framework", "laravel", "laraboot"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -11,6 +11,7 @@
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.1",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",

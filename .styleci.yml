@@ -1,0 +1,12 @@
+preset: laravel
+
+finder:
+  exclude:
+    - public
+    - resources
+    - storage
+    - vendor
+  name:
+    - "*.php"
+  not-name:
+    - "server.php"
