@@ -27,7 +27,7 @@ Cansado de sempre que baixa o Laravel ter que aplicar traduções, adicionar ico
 
 Primeiramente você deve clonar este repositório:
 
-    git clone https://github.com/fabiojaniolima/laravel-boot.git
+    git clone https://github.com/fabiojaniolima/laraboot.git
 
 > **Nota**: os comandos abaixo DEVEM ser executados dentro do diretório descarregado no passo anterior.
 
