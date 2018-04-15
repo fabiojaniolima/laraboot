@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
+use App\Notifications\EnviarLinkRedefinirSenha;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -33,4 +34,14 @@ class User extends Authenticatable
      * @var int
      */
     public static $min_password_size = 8;
+
+    /**
+     * Notifica o usuário com link para redefinição de senha.
+     *
+     * @param string $token
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new EnviarLinkRedefinirSenha($token));
+    }
 }
