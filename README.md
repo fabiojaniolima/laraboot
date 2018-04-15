@@ -46,6 +46,19 @@ Crie o arquivo de configuração do Laravel e posteriormente gere uma chave:
     composer run-script post-root-package-install
     php artisan key:generate
 
+## Populando base de dados
+
+Para rodar a instrução a seguir, você DEVE primeiramente configurar os dados de acesso ao banco no arquivo **.env**.
+
+Posteriormente a configuração do banco execute:
+
+    php artisan migrate --seed
+
+Pronto, agora abra o navegador e acessa sua aplicação. O argumento `--seed` executado acima cria por padrão um usuário com os seguintes dados:
+
+- E-mail: **admin@user.com**
+- Senha: **secret**
+
 ## License
 
 Todo o conteúdo presente neste diretório segue o que determina a licença [MIT](https://opensource.org/licenses/MIT).

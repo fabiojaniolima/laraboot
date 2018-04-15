@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::prefix('painel')->middleware('auth')->group(function () {
+    Route::get('/', 'Painel\HomeController@index')->name('dashboard');
+});

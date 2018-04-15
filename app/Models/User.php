@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Tamanho mínimo da senha do usuário.
+     *
+     * @var int
+     */
+    public static $min_password_size = 8;
 }
