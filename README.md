@@ -1,6 +1,11 @@
 # LaraBoot
 
-Este projeto foi construido com base no [Laravel 5.6](https://laravel.com/docs/5.6).
+<a href="https://travis-ci.org/fabiojaniolima/laraboot"><img src="https://travis-ci.org/fabiojaniolima/laraboot.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/fabiojaniolima/laraboot"><img src="https://poser.pugx.org/fabiojaniolima/laraboot/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/fabiojaniolima/laraboot"><img src="https://poser.pugx.org/fabiojaniolima/laraboot/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/fabiojaniolima/laraboot"><img src="https://poser.pugx.org/fabiojaniolima/laraboot/license.svg" alt="License"></a>
+
+Este projeto foi construido com base no [Laravel 5.6](https://laravel.com/docs/5.6), para uma visão maior favor consultar o arquivo [CHANGELOG](CHANGELOG.md).
 
 As palavras-chave "DEVE", "NÃO DEVE", "REQUER", "DEVERIA", "NÃO DEVERIA", "PODERIA", "NÃO PODERIA", "RECOMENDÁVEL", "PODE", e "OPCIONAL" neste documento devem ser interpretadas como descritas no RFC 2119. Tradução livre RFC 2119 pt-br.
 
@@ -25,6 +30,22 @@ Cansado de sempre que baixa o Laravel ter que aplicar traduções, adicionar ico
 
 ## Como instalar
 
+Segue abaixo as formas como você pode proceder para instalar este projeto.
+
+### Via composer
+
+Para realizar a instalação automática:
+
+    composer create-project --prefer-dist fabiojaniolima/laraboot
+
+Já em um **ambiente de produção**, as dependências do Laravel DEVEM ser instaladas por meio da instrução:
+
+    composer create-project --prefer-dist fabiojaniolima/laraboot --no-dev
+
+**Obs:** o parâmetro `--no-dev` determina que pacotes de desenvolvimento, tais como o *laravel-debugbar* sejam ignorados pelo processo de instalação. Uma abordagem adequada a ambientes de produção, já que isso pode afetar tanto a performance como a segurança da aplicação.
+
+### Via git clone
+
 Primeiramente você deve clonar este repositório:
 
     git clone https://github.com/fabiojaniolima/laraboot.git
@@ -39,7 +60,7 @@ Já em um **ambiente de produção**, as dependências do Laravel DEVEM ser inst
 
     composer update --no-dev
 
-**Obs:** o parâmetro `--no-dev` determina que pacotes de desenvolvimento sejam ignorados pelo processo de instalação. Uma abordagem adequada para ambientes de produção, já que isso pode afetar tanto a performance como a segurança do seu aplicativo.
+**Obs:** o parâmetro `--no-dev` determina que pacotes de desenvolvimento, tais como o *laravel-debugbar* sejam ignorados pelo processo de instalação. Uma abordagem adequada a ambientes de produção, já que isso pode afetar tanto a performance como a segurança da aplicação.
 
 Crie o arquivo de configuração do Laravel e posteriormente gere uma chave:
 
