@@ -8,11 +8,7 @@
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    @include('includes.alert')
 
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
@@ -34,7 +30,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                                    <i class="fas fa-paper-plane"></i> {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
                         </div>
