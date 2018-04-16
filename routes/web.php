@@ -19,4 +19,7 @@ Auth::routes();
 
 Route::prefix('painel')->middleware('auth')->group(function () {
     Route::get('/', 'Painel\HomeController@index')->name('dashboard');
+
+    Route::get('alterar-senha', 'Painel\AlterarSenhaController@index')->name('alterar-senha');
+    Route::post('alterar-senha', 'Painel\AlterarSenhaController@alterarSenha')->name('alterar-senha');
 });
