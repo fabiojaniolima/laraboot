@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.1.0 (2018-04-16)
+
+### Added
+
+- Função alterar e-mail, rota: `/painel/alterar-email` [(f3c9945)](https://github.com/fabiojaniolima/laravel-boot/commit/f3c994521899c406fc12c2858351642822490254)
+- Função alterar senha, rota: `/painel/alterar-senha` [(be634ea)](https://github.com/fabiojaniolima/laravel-boot/commit/be634ea1b74aa3e16d5be183fce80fdced790478)
+
 ## v1.0.0 (2018-04-15)
 
 ### Added
