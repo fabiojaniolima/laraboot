@@ -22,4 +22,7 @@ Route::prefix('painel')->middleware('auth')->group(function () {
 
     Route::get('alterar-senha', 'Painel\AlterarSenhaController@index')->name('alterar-senha');
     Route::post('alterar-senha', 'Painel\AlterarSenhaController@alterarSenha')->name('alterar-senha');
+
+    Route::get('alterar-email', 'Painel\AlterarEmailController@index')->name('alterar-email');
+    Route::post('alterar-email', 'Painel\AlterarEmailController@alterarEmail')->name('alterar-email');
 });
