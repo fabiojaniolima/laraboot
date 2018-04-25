@@ -4,6 +4,11 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
+
+                <a class="btn btn-info mb-4" href="{{ route('alterar-perfil') }}"><i class="fas fa-user"></i> Perfil</a>
+                <a class="btn btn-info mb-4" href="{{ route('alterar-email') }}"><i class="fas fa-at"></i> Alterar e-mail</a>
+                <a class="btn btn-info mb-4" href="{{ route('alterar-senha') }}"><i class="fas fa-key"></i> Alterar senha</a>
+
                 <div class="card">
                     <div class="card-header">Alterar email</div>
 
