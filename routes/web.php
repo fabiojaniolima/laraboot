@@ -25,4 +25,7 @@ Route::prefix('painel')->middleware('auth')->group(function () {
 
     Route::get('alterar-email', 'Painel\AlterarEmailController@index')->name('alterar-email');
     Route::post('alterar-email', 'Painel\AlterarEmailController@alterarEmail')->name('alterar-email');
+
+    Route::get('alterar-perfil', 'Painel\AlterarPerfilController@alterarPerfil')->name('alterar-perfil');
+    Route::post('salvar-perfil', 'Painel\AlterarPerfilController@salvarPerfil')->name('salvar-perfil');
 });
