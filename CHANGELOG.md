@@ -1,9 +1,16 @@
 # Release Notes
 
+## v1.2.0 (2018-04-25)
+
+### Added
+- Função alterar perfil, rota: `/painel/alterar-perfil` [(8085036)](https://github.com/fabiojaniolima/laraboot/commit/8085036907db43f2e934a726a57ac4dc6c012cea)
+
+### Changed
+- Pequenas adequações visuais (add botões e espaçamento) [(7d5ef6c)](https://github.com/fabiojaniolima/laraboot/commit/7d5ef6c63f4515037edb784c0a18ba1bc2b90016)
+
 ## v1.1.0 (2018-04-16)
 
 ### Added
-
 - Função alterar e-mail, rota: `/painel/alterar-email` [(f3c9945)](https://github.com/fabiojaniolima/laraboot/commit/f3c994521899c406fc12c2858351642822490254)
 - Função alterar senha, rota: `/painel/alterar-senha` [(be634ea)](https://github.com/fabiojaniolima/laraboot/commit/be634ea1b74aa3e16d5be183fce80fdced790478)
 
