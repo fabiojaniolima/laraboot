@@ -47,8 +47,8 @@ class ResetPasswordController extends Controller
     {
         return [
             'token' => 'required',
-            'email' => 'required|string|email|max:255',
-            'password' => 'required|string|confirmed|min:'.User::$min_password_size,
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:'.User::$min_password_size,
         ];
     }
 }
