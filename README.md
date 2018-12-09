@@ -85,13 +85,13 @@ Pronto, agora abra o navegador e acessa sua aplicação. O argumento `--seed` ex
 Execute a instrução abaixo para baixar e criar um projeto baseado no **Laraboot**:
 
 ```
-docker run --rm fabiojanio/php composer create-project --prefer-dist fabiojaniolima/laraboot meu-projeto 
+docker run --rm -v $(pwd):/app fabiojanio/php composer create-project --prefer-dist fabiojaniolima/laraboot meu-projeto
 ```
 
 Acesse o diretório do projeto e execute:
 
 ```
-docker run -v /projeto:/app -d -p 80:80 --name nome_do_container fabiojanio/php
+docker run -v $(pwd):/app -d -p 80:80 --name nome_do_container fabiojanio/php php -S 0.0.0.0:80 -t public
 ```
 
 Para se conectar ao container e usar o composer, execute:
