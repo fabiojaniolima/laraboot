@@ -1,5 +1,11 @@
 # Release Notes
 
+## v2.0.1 (2018-12-09)
+
+### Fixed
+- Nome dos campos no callback traduzidos para pt-BR [(87152d1)](https://github.com/fabiojaniolima/laraboot/commit/87152d128547f02f80b9ec0b8c2c81dc694d9b6e)
+- Seleção de gênero  [(87152d1)](https://github.com/fabiojaniolima/laraboot/commit/87152d128547f02f80b9ec0b8c2c81dc694d9b6e)
+
 ## v2.0.0 (2018-12-09)
 
 ### Changed
