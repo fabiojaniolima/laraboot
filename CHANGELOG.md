@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.0.0 (2018-12-09)
+
+### Changed
+- Código refatorado com base no Laravel 5.7 [(2e86960)](https://github.com/fabiojaniolima/laraboot/commit/2e86960dbfd228bd16d1b2aef9d2058c677e3b3a)
+
+### Removed
+- Laravel-debugbar [(2e86960)](https://github.com/fabiojaniolima/laraboot/commit/2e86960dbfd228bd16d1b2aef9d2058c677e3b3a)
+
 ## v1.2.0 (2018-04-25)
 
 ### Added
