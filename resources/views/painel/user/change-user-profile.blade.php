@@ -70,19 +70,19 @@
                                     <fieldset id="gender">
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="F" {{ $user->gender == 'F' ? 'checked' : '' }}>
+                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="F" {{ (old('gender') == 'F' or (! old('gender') and $user->gender == 'F')) ? 'checked' : '' }}>
                                                 Feminino
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="M" {{ $user->gender == 'M' ? 'checked' : '' }}>
+                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="M" {{ (old('gender') == 'M' or (! old('gender') and $user->gender == 'M')) ? 'checked' : '' }}>
                                                 Masculino
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="Não declarado" {{ $user->gender == 'Não declarado' ? 'checked' : '' }}>
+                                                <input type="radio" class="form-check-input{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" value="Não declarado" {{ (old('gender') == 'Não declarado' or (! old('gender') and $user->gender == 'Não declarado')) ? 'checked' : '' }}>
                                                 Não declarado
                                             </label>
                                         </div>
@@ -100,7 +100,7 @@
                                 <label for="dt_birth" class="col-md-4 col-form-label text-md-right">Data de nascimento</label>
 
                                 <div class="col-md-6">
-                                    <input id="dt_birth" type="date" placeholder="dd/mm/yyyy" class="form-control{{ $errors->has('dt_birth') ? ' is-invalid' : '' }}" name="dt_birth" value="{{ old('profession') ?? $user->dt_birth }}">
+                                    <input id="dt_birth" type="date" placeholder="dd/mm/yyyy" class="form-control{{ $errors->has('dt_birth') ? ' is-invalid' : '' }}" name="dt_birth" value="{{ old('dt_birth') ?? $user->dt_birth }}">
 
                                     @if ($errors->has('dt_birth'))
                                         <span class="invalid-feedback" role="alert">

@@ -25,6 +25,12 @@ class ChangeUserProfileController extends Controller
         return view('painel.user.change-user-profile', compact('user'));
     }
 
+    /**
+     * Salva os dados do perfil do usuário.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     */
     public function changeUserProfile(Request $request)
     {
         $request->validate([
@@ -32,7 +38,14 @@ class ChangeUserProfileController extends Controller
             'profession' => 'min:3|nullable',
             'biography' => 'min:20|nullable',
             'gender' => 'required|in:F,M,Não declarado',
-            'dt_birth' => 'date_format:d/m/Y',
+            'dt_birth' => 'required|date_format:d/m/Y',
+        ], [
+            'dt_birth.date_format' => 'O campo :attribute não corresponde ao formato dd/mm/yyyy',
+        ], [
+            'profession' => 'profissão',
+            'biography' => 'biografia',
+            'gender' => 'gênero',
+            'dt_birth' => 'data de nascimento',
         ]);
 
         //Converte a data para o formato nativo do banco
