@@ -32,6 +32,7 @@
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $user->email }}" readonly>
+                                    <small class="text-muted">Para alterar o email <a href="{{ url('/painel/alterar-email') }}">clique aqui!</a> </small>
                                 </div>
                             </div>
 
