@@ -22,7 +22,7 @@ class ChangeUserProfileController extends Controller
             $user->dt_birth = \DateTime::createFromFormat('Y-m-d', $user->dt_birth)->format('d/m/Y');
         }
 
-        return view('painel.user.change-user-profile', compact('user'));
+        return view('panel.user.change-user-profile', compact('user'));
     }
 
     /**
