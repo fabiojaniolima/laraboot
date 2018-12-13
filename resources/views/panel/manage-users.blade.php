@@ -56,7 +56,7 @@
                                 <td class="text-center">{{ $u->created_at->format('d/m/Y à\s H:i:s')}}</td>
                                 <td class="text-center">
                                     <div class="list-inline">
-                                        <span class="list-inline-item"><a title="Detalhes" href="#"><i class="far fa-eye" style="color: #f6963e"></i></a></span>
+                                        <span class="list-inline-item"><a title="Detalhes" href="{{ url('/painel/gerenciar-usuarios/mostrar', $u->id) }}"><i class="far fa-eye" style="color: #f6963e"></i></a></span>
                                         <span class="list-inline-item"><a title="Editar" href="#"><i class="far fa-edit text-success"></i></a></span>
                                         <span class="list-inline-item"><a title="Excluir" href="#"><i class="far fa-trash-alt text-danger"></i></a></span>
                                     </div>
