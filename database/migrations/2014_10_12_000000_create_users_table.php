@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->text('biography')->nullable();
             $table->enum('gender', ['F', 'M', 'Não declarado'])->default('Não declarado');
             $table->date('dt_birth')->nullable();
+            $table->boolean('locked')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

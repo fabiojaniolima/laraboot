@@ -17,8 +17,11 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
+        'dt_birth' => $faker->date('Y-m-d', '-5 years'),
+        'gender' => $faker->randomElement(['F', 'M', 'Não declarado']),
+        'locked' => $faker->randomElement([0, 1]),
         'email_verified_at' => now(),
-        'password' => '$2y$10$9GUAg6Gp2uIQDpZcHG8fr.pADfK8jdU6Djplzd5tB6DzXpZJysaxS', // password
+        'password' => bcrypt('password'),
         'remember_token' => str_random(10),
     ];
 });

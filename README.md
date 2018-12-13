@@ -9,7 +9,28 @@ Este projeto foi construido com base no [Laravel 5.7](https://laravel.com/docs/5
 
 As palavras-chave "DEVE", "NÃO DEVE", "REQUER", "DEVERIA", "NÃO DEVERIA", "PODERIA", "NÃO PODERIA", "RECOMENDÁVEL", "PODE", e "OPCIONAL" neste documento devem ser interpretadas como descritas no RFC 2119. Tradução livre RFC 2119 pt-br.
 
-### Requisitos
+## Recursos disponíveis
+
+> Lista dos itens implementados até o momento.
+
+- Tradução pt-BR para:
+  - Mensagens de validação
+  - Labels
+  - Páginas de erro: 403, 404 e 405
+  - E-mail de recuperação de senha
+- Área restrita: `/painel`
+  - Tela para o usuário alterar os dados cadastrais
+  - Tela para o usuário alterar o e-mail
+  - Tela para o usuário alterar a senha
+  - Tela para o super admin gerenciar os usuários: `/painel/gerenciar-usuarios`
+    - Listagem de usuários
+    - Bloqueio/Desloqueio de usuários
+    - Excluir usuários
+    - Buscar usuários por nome ou email
+    - Restrinção: só o super admin (user_id = 1) pode acessar
+- Formulário de recuperação de senha com auto-preenchimento do campo e-mail
+
+## Requisitos
 
 Você DEVE satisfazer as seguintes dependências nativas do Laravel:
 

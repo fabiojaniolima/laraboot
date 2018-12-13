@@ -17,8 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::prefix('painel')->middleware('auth')->group(function () {
     Route::get('/', 'Panel\HomeController@index')->name('dashboard');
 
@@ -30,4 +28,13 @@ Route::prefix('painel')->middleware('auth')->group(function () {
 
     Route::get('alterar-senha', 'Panel\User\ChangePasswordController@index');
     Route::post('alterar-senha', 'Panel\User\ChangePasswordController@changePassword');
+
+    Route::prefix('gerenciar-usuarios')->middleware('can:only-superadmin')->group(function () {
+        Route::get('/', 'Panel\ManageUsers\ListController@index');
+        Route::post('/', 'Panel\ManageUsers\ListController@search');
+
+        Route::get('mostrar/{id}', 'Panel\ManageUsers\ManageUsersController@show');
+        Route::get('alterar-status/{id}', 'Panel\ManageUsers\ManageUsersController@changeStatus');
+        Route::get('excluir/{id}', 'Panel\ManageUsers\ManageUsersController@destroy');
+    });
 });

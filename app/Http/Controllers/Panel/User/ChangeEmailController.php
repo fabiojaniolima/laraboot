@@ -16,7 +16,7 @@ class ChangeEmailController extends Controller
      */
     public function index()
     {
-        return view('painel.user.change-email');
+        return view('panel.user.change-email');
     }
 
     /**

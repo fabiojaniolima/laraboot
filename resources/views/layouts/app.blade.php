@@ -53,6 +53,11 @@
                             <li class="nav-item mt-1">
                                 <a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                             </li>
+                        @can('only-superadmin')
+                            <li class="nav-item mt-1">
+                                <a class="nav-link" href="{{ url('/painel/gerenciar-usuarios') }}"><i class="fas fa-users"></i> Usuários</a>
+                            </li>
+                        @endcan
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fas fa-user-circle fa-2x"></i> <span class="caret"></span>

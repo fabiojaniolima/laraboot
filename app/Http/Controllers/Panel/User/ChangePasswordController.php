@@ -17,7 +17,7 @@ class ChangePasswordController extends Controller
      */
     public function index()
     {
-        return view('painel.user.change-password');
+        return view('panel.user.change-password');
     }
 
     /**
