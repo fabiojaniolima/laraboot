@@ -30,10 +30,10 @@ class ManageUsersController extends Controller
     {
         $user = User::find($id);
 
-        $user->update(['locked' => !$user->locked]);
+        $user->update(['locked' => ! $user->locked]);
 
         return redirect('/painel/gerenciar-usuarios')
-            ->with(['status' => 'success', 'msg' => 'O status do Usuário: "' . $user->name . '" alterado com sucesso!']);
+            ->with(['status' => 'success', 'msg' => 'O status do Usuário: "'.$user->name.'" alterado com sucesso!']);
     }
 
     /**
@@ -49,6 +49,6 @@ class ManageUsersController extends Controller
         $user->delete();
 
         return redirect('/painel/gerenciar-usuarios')
-                    ->with(['status' => 'success', 'msg' => 'O usuário: "' . $user->name . '" foi excluido com sucesso!']);
+                    ->with(['status' => 'success', 'msg' => 'O usuário: "'.$user->name.'" foi excluido com sucesso!']);
     }
 }

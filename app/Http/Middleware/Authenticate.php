@@ -2,9 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class Authenticate extends Middleware
 {
@@ -36,9 +36,10 @@ class Authenticate extends Middleware
         foreach ($guards as $guard) {
             if ($this->auth->guard($guard)->check()) {
                 // Verifica se o usuário possui bloqueio
-                if(Auth::user()->locked) {
+                if (Auth::user()->locked) {
                     abort(403, Lang::getFromJson('User account blocked!'));
                 }
+
                 return $this->auth->shouldUse($guard);
             }
         }
