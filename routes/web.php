@@ -30,4 +30,7 @@ Route::prefix('painel')->middleware('auth')->group(function () {
 
     Route::get('alterar-senha', 'Panel\User\ChangePasswordController@index');
     Route::post('alterar-senha', 'Panel\User\ChangePasswordController@changePassword');
+
+    Route::get('gerenciar-usuarios', 'Panel\ManageUsers\ListController@index');
+    Route::post('gerenciar-usuarios', 'Panel\ManageUsers\ListController@search');
 });
