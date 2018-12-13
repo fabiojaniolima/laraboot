@@ -1,5 +1,30 @@
 # Release Notes
 
+## v2.1.0 (2018-12-13)
+
+### Added
+- Impede que usuários bloqueados efetuem login ou continuem navegando no sistema [(751cf6f)](https://github.com/fabiojaniolima/laraboot/commit/751cf6f33242c8fbc7e9a0bb06dda4931836c667)
+- Restrinção no acesso a `/painel/gerenciar-usuarios` [(3769341)](https://github.com/fabiojaniolima/laraboot/commit/3769341b1ae0c1348885deb8375fd3a1ae9a69ac)
+- Bloquear/desbloquear usuário [(cf4ac3f)](https://github.com/fabiojaniolima/laraboot/commit/cf4ac3f205952ca6aed5e36a8c5f91e7a6fe4eaf)
+- Excluir usuários [(ddbb687)](https://github.com/fabiojaniolima/laraboot/commit/ddbb6875a1c5a4e9ec9487599ea4973385a7cef7)
+- Página com detalhes do usuário [(25ac667)](https://github.com/fabiojaniolima/laraboot/commit/25ac66747614181be3f5c17390247ee32bb8671e)
+- Listagem de usuários [(4ac54fb)](https://github.com/fabiojaniolima/laraboot/commit/4ac54fb97b7afea0bbc36c50a6496e40e074db18)
+- Tradução pt-BR as páginas de *erro* 403, 404 e 500 [(ac35812)](https://github.com/fabiojaniolima/laraboot/commit/ac3581268438071a2ca56d055d1125fa5cb8795f)
+- Link para alteração de e-mail no form de dados cadastrais [(3931f25)](https://github.com/fabiojaniolima/laraboot/commit/3931f250784152cfa456a29ce8e53b4c0f392f9a)
+
+### Changed
+- Obriga novos usuários a informar um nome `>=` a 3 caracteres [(4f65936)](https://github.com/fabiojaniolima/laraboot/commit/4f6593637866504aea210511600622c882168353)
+- Diretório user renomeado para User [(c8c6d1b)](https://github.com/fabiojaniolima/laraboot/commit/c8c6d1b81f2ac3c9485dbf64644bc947934f2099)
+- Diretório de views alterado de painel para panel [(93a883c)](https://github.com/fabiojaniolima/laraboot/commit/93a883cf193ecb6e81a532db7c4be91eb94fc549)
+
+### Fixed
+- Erro que era apresentado quando a sessão do usuário se tornava invalida [(#2)](https://github.com/fabiojaniolima/laraboot/issues/2)
+- Adequação das instruções para criação do container de desenvolvimento [(df6b388)](https://github.com/fabiojaniolima/laraboot/commit/df6b3882f5bd32a2e1cf9ade41a39e3cbe87bab7)
+
+### Removed
+- Rota `home` [(1944247)](https://github.com/fabiojaniolima/laraboot/commit/194424780f812145297b4bf7d8f083667d92d5c2)
+- Laravel-debugbar [(a57df81)](https://github.com/fabiojaniolima/laraboot/commit/a57df81f7456c541d51de321d33909efb94031c1)
+
 ## v2.0.1 (2018-12-09)
 
 ### Fixed
