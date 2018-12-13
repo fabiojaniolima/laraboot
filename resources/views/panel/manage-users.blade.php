@@ -56,8 +56,8 @@
                                 <td class="text-center">{{ $u->created_at->format('d/m/Y à\s H:i:s')}}</td>
                                 <td class="text-center">
                                     <div class="list-inline">
-                                        <span class="list-inline-item"><a title="Detalhes" href="{{ url('/painel/gerenciar-usuarios/mostrar', $u->id) }}"><i class="far fa-eye" style="color: #f6963e"></i></a></span>
-                                        <span class="list-inline-item"><a title="Editar" href="#"><i class="far fa-edit text-success"></i></a></span>
+                                        <span class="list-inline-item"><a title="Detalhes" href="{{ url('/painel/gerenciar-usuarios/mostrar', $u->id) }}"><i class="far fa-eye text-success"></i></a></span>
+                                        <span class="list-inline-item"><a title="{{ $u->locked ? 'Liberar' : 'Bloquear' }}" href="{{ url('/painel/gerenciar-usuarios/alterar-status', $u->id) }}"><i class="far fa-{{ $u->locked ? 'check-circle' : 'times-circle' }}" style="color: #f6963e"></i></a></span>
                                         <span class="list-inline-item"><a title="Excluir" href="{{ url('/painel/gerenciar-usuarios/excluir', $u->id) }}"><i class="far fa-trash-alt text-danger"></i></a></span>
                                     </div>
                                 </td>
