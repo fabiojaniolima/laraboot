@@ -35,4 +35,5 @@ Route::prefix('painel')->middleware('auth')->group(function () {
     Route::post('gerenciar-usuarios', 'Panel\ManageUsers\ListController@search');
 
     Route::get('gerenciar-usuarios/mostrar/{id}', 'Panel\ManageUsers\ManageUsersController@show');
+    Route::get('gerenciar-usuarios/excluir/{id}', 'Panel\ManageUsers\ManageUsersController@destroy');
 });
