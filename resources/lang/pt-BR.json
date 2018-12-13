@@ -20,8 +20,9 @@
   "All rights reserved.": "Todos os direitos reservados.",
   "Page Not Found": "Página não encontrada",
   "Sorry, the page you are looking for could not be found.":  "Desculpe, a página que você está procurando não foi encontrada.",
-  "Forbidden": "Acesso proibido",
+  "Forbidden": "Acesso negado",
   "Sorry, you are forbidden from accessing this page.": "Desculpe, você está proibido de acessar esta página.",
   "Error": "Erro interno",
-  "Whoops, something went wrong on our servers.": "Oooops, algo deu errado em nossos servidores! Tente recarregar a página."
+  "Whoops, something went wrong on our servers.": "Oooops, algo deu errado em nossos servidores! Tente recarregar a página.",
+  "This action is unauthorized.": "Esta ação não é autorizada."
 }
