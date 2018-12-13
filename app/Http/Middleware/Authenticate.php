@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class Authenticate extends Middleware
@@ -26,6 +27,7 @@ class Authenticate extends Middleware
      *
      * @param \Illuminate\Http\Request $request
      * @param array $guards
+     * @throws AuthenticationException
      */
     protected function authenticate($request, array $guards)
     {
