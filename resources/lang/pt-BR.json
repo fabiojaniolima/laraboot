@@ -25,5 +25,6 @@
   "Error": "Erro interno",
   "Whoops, something went wrong on our servers.": "Oooops, algo deu errado em nossos servidores! Tente recarregar a página.",
   "This action is unauthorized.": "Esta ação não é autorizada.",
-  "User account blocked!": "Conta de usuário bloqueada!"
+  "User account blocked!": "Conta de usuário bloqueada!",
+  "Sorry, your session has expired. Please refresh and try again.": "Desculpe, sua sessão expirou. Por favor, clique no botão:"
 }
