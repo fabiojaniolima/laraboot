@@ -57,8 +57,8 @@
                                 <td class="text-center">
                                     <div class="list-inline">
                                         <span class="list-inline-item"><a title="Detalhes" href="{{ url('/painel/gerenciar-usuarios/mostrar', $u->id) }}"><i class="far fa-eye text-success"></i></a></span>
-                                        <span class="list-inline-item"><a title="{{ $u->locked ? 'Liberar' : 'Bloquear' }}" href="{{ url('/painel/gerenciar-usuarios/alterar-status', $u->id) }}"><i class="far fa-{{ $u->locked ? 'check-circle' : 'times-circle' }}" style="color: #f6963e"></i></a></span>
-                                        <span class="list-inline-item"><a title="Excluir" href="{{ url('/painel/gerenciar-usuarios/excluir', $u->id) }}"><i class="far fa-trash-alt text-danger"></i></a></span>
+                                        <span class="list-inline-item"><a title="{{ $u->locked ? 'Bloqueado' : 'Desbloqueado' }}" data-method="locked" href="{{ url('/painel/gerenciar-usuarios/alterar-status', $u->id) }}"><i class="far fa-{{ $u->locked ? 'check-circle' : 'times-circle' }}" style="color: #f6963e"></i></a></span>
+                                        <span class="list-inline-item"><a title="Excluir" data-method="delete" href="{{ url('/painel/gerenciar-usuarios/excluir', $u->id) }}"><i class="far fa-trash-alt text-danger"></i></a></span>
                                     </div>
                                 </td>
                             </tr>
@@ -78,4 +78,33 @@
         </div>
     </div>
 </div>
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            var url, username;
+
+            function mensage(event, action) {
+                event.preventDefault();
+
+                var msg = `O usuário "${username}" será excluido!`;
+
+                if (action)
+                    msg = `Essa ação irá ${action} o usuário "${username}"!`;
+
+                if (confirm(msg))
+                    window.location = url;
+            };
+
+            $('.list-inline-item').on('click', 'a[data-method="delete"], a[data-method="locked"]', function (e) {
+                url = $(this).attr('href');
+                username = $(this).parents('tr').children('td:nth-child(2)').text();
+
+                if ($(this).attr('data-method') == 'locked')
+                    return mensage(e, $(this).attr('title') == 'Bloqueado' ? 'Desbloquear' : 'Bloquear');
+
+                return mensage(e);
+            });
+        });
+    </script>
+@endpush
 @endsection
