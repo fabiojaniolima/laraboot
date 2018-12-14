@@ -53,7 +53,7 @@
                                         <i title="Ativo" class="fas fa-user-check text-success"></i>
                                     @endif
                                 </td>
-                                <td class="text-center">{{ $u->created_at->format('d/m/Y à\s H:i:s')}}</td>
+                                <td class="text-center">{{ $u->created_at}}</td>
                                 <td class="text-center">
                                     <div class="list-inline">
                                         <span class="list-inline-item"><a title="Detalhes" href="{{ url('/painel/gerenciar-usuarios/mostrar', $u->id) }}"><i class="far fa-eye text-success"></i></a></span>
