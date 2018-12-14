@@ -23,5 +23,6 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => bcrypt('password'),
         'remember_token' => str_random(10),
+        'created_at' => $faker->dateTimeBetween('-10 years', 'now'),
     ];
 });
