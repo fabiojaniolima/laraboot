@@ -1,5 +1,15 @@
 # Release Notes
 
+## v2.2.0 (2018-12-14)
+
+### Added
+- Alert para ações de bloqueio/desbloqueio e exclusão de usuário [(6e7a9c4)](https://github.com/fabiojaniolima/laraboot/commit/6e7a9c4165433913ee7ce6e84deda5e1bfa4faa5)
+- Tradução pt-BR para a página 419 [(9fd3855)](https://github.com/fabiojaniolima/laraboot/commit/9fd38558e7f9b0f6506eec5d11e295846348004f)
+
+### Changed
+- Preenchimento do campo `created_at` [(4832a59)](https://github.com/fabiojaniolima/laraboot/commit/4832a590a17598cad9fae496212a559f5d6a65b2)
+- Aplicado mutetors na model User para padronizar formato de dados [(e4c4385)](https://github.com/fabiojaniolima/laraboot/commit/e4c43853bf2e5c8cd8f25cdf0ed9b7f70d7c54db)
+
 ## v2.1.0 (2018-12-13)
 
 ### Added

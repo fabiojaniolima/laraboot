@@ -15,7 +15,7 @@
                                 <li class="list-group-item"><i class="fas fa-envelope"></i> E-mail: {{ $user->email }}</li>
                                 <li class="list-group-item"><i class="fas fa-user-tie"></i> Profissão: {{ $user->profession }}</li>
                                 <li class="list-group-item"><i class="fas fa-book"></i> Biografia: {{ $user->biography }}</li>
-                                <li class="list-group-item"><i class="fas fa-stopwatch"></i> Cadastrado desde: {{ $user->created_at->format('d/m/Y à\s H:i:s') }}</li>
+                                <li class="list-group-item"><i class="fas fa-stopwatch"></i> Cadastrado desde: {{ $user->created_at }}</li>
                                 <li class="list-group-item"><i class="fas fa-transgender-alt"></i> Gênero: {{ $user->gender }}</li>
                                 <li class="list-group-item"><i class="fas fa-calendar-alt"></i> Data de nascimento: {{ date('d/m/Y', strtotime($user->dt_birth)) }}</li>
                                 <li class="list-group-item"><i class="fas fa-check-square"></i> Status: {{ $user->locked ? 'Ativo' : 'Bloqueado' }}</li>

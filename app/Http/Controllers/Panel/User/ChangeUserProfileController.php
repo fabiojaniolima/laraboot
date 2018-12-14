@@ -18,10 +18,6 @@ class ChangeUserProfileController extends Controller
     {
         $user = Auth::user();
 
-        if ($user->dt_birth) {
-            $user->dt_birth = \DateTime::createFromFormat('Y-m-d', $user->dt_birth)->format('d/m/Y');
-        }
-
         return view('panel.user.change-user-profile', compact('user'));
     }
 
@@ -49,9 +45,7 @@ class ChangeUserProfileController extends Controller
         ]);
 
         //Converte a data para o formato nativo do banco
-        $request->merge(
-            ['dt_birth' => \DateTime::createFromFormat('d/m/Y', $request->input('dt_birth'))->format('Y-m-d')]
-        );
+        $request->merge(['dt_birth' => $request->dt_birth]);
 
         Auth::user()->update($request->only(['name', 'profession', 'biography', 'gender', 'dt_birth']));
 
