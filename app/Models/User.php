@@ -74,7 +74,7 @@ class User extends Authenticatable
      */
     public function setDtBirthAttribute($date)
     {
-        if ($date) {
+        if ($date && strpos($date, '/')) {
             $this->attributes['dt_birth'] = DateTime::createFromFormat('d/m/Y', $date)->format('Y-m-d');
         }
     }
