@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.2.1 (2018-12-21)
+
+### Fixed
+- Corrigido um erro que ocorria ao tentar inserir data de aniversário no banco [(#3)](https://github.com/fabiojaniolima/laraboot/issues/3)
+
+### Changed
+- Ao rodar a seed o admin DEVE inicia com locked = 0 [(918e40b)](https://github.com/fabiojaniolima/laraboot/commit/918e40bb4b35059757c9f1b601d6ed1818731398)
+- Ajuste na estrutura de diretórios das views [(85618f1)](https://github.com/fabiojaniolima/laraboot/commit/85618f1dfbeb9c4276006d737698ac0019fd0748)
+
 ## v2.2.0 (2018-12-14)
 
 ### Added
