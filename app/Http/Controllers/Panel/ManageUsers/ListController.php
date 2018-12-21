@@ -17,7 +17,7 @@ class ListController extends Controller
     {
         $users = User::orderBy('created_at', 'desc')->paginate();
 
-        return view('panel.manage-users', compact('users'));
+        return view('panel.manage-users.manage-users', compact('users'));
     }
 
     /**
@@ -35,6 +35,6 @@ class ListController extends Controller
 
         $filter = $request->search;
 
-        return view('panel.manage-users', compact('users', 'filter'));
+        return view('panel.manage-users.manage-users', compact('users', 'filter'));
     }
 }

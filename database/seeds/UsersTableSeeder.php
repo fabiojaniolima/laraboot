@@ -13,6 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         factory(App\Models\User::class)->create([
             'email' => 'admin@user.com',
+            'locked' => 0,
         ]);
     }
 }
