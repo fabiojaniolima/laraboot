@@ -30,6 +30,14 @@
                             <hr>
 
                             <div class="form-group row">
+                                <label for="current_mail" class="col-md-4 col-form-label text-md-right">E-mail atual</label>
+
+                                <div class="col-md-6">
+                                    <input id="current_mail" class="form-control" name="current_mail" value="{{ Auth::user()->email }}" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">Novo e-mail</label>
 
                                 <div class="col-md-6">
