@@ -10,26 +10,22 @@ class ManageUsersController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param $id
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::find($id);
-
         return view('panel.manage-users.show', compact('user'));
     }
 
     /**
      * Bloqueia ou ligera um usuário para acesso a aplicação.
      *
-     * @param $id
+     * @param User $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function changeStatus($id)
+    public function changeStatus(User $user)
     {
-        $user = User::find($id);
-
         $user->update(['locked' => ! $user->locked]);
 
         return redirect('/painel/gerenciar-usuarios')
@@ -39,13 +35,12 @@ class ManageUsersController extends Controller
     /**
      * Exclui o usuário do banco de dados.
      *
-     * @param $id
+     * @param User $user
      * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::find($id);
-
         $user->delete();
 
         return redirect('/painel/gerenciar-usuarios')
