@@ -19,6 +19,7 @@ As palavras-chave "DEVE", "NÃO DEVE", "REQUER", "DEVERIA", "NÃO DEVERIA", "POD
   - Páginas de erro: 403, 404 e 405
   - E-mail de recuperação de senha
 - Área restrita: `/painel`
+  - Tela de Dashboard mostrando total de usuários cadastrados, bloqueados e ativos
   - Tela para o usuário alterar os dados cadastrais
   - Tela para o usuário alterar o e-mail
   - Tela para o usuário alterar a senha

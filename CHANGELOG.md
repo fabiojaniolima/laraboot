@@ -1,5 +1,16 @@
 # Release Notes
 
+## v2.3.10 (2019-02-13)
+
+### Added
+- Add contador de total de usuários cadastrados, bloqueados e ativos [(e962d1b)](https://github.com/fabiojaniolima/laraboot/commit/e962d1bb2f2d36d8b6be412a6d8c0415331486f1)
+- Add proteção contra auto-exclusão da sessão corrente [(0728bea)](https://github.com/fabiojaniolima/laraboot/commit/0728bea8ffa4be1087bf34a7d211d08cdd246928)
+
+### Changed
+- Rename ManageUsers para ManageUser [(60c6207)](https://github.com/fabiojaniolima/laraboot/commit/60c6207b85157226010b41ff165251147ab1036d)
+- Dados do usuário apresentados em tabela [(ca68b2f)](https://github.com/fabiojaniolima/laraboot/commit/ca68b2f8c4028e0e6921a1f374dae6cb11889993)
+- Usuário passado via injeção de dependência [(7c8cbfb)](https://github.com/fabiojaniolima/laraboot/commit/7c8cbfb039f2de8b71c7044f8c8a6088126177c4)
+
 ## v2.2.1 (2018-12-21)
 
 ### Fixed
