@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Panel\ManageUsers;
 
+use Auth;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 
@@ -26,10 +27,15 @@ class ManageUsersController extends Controller
      */
     public function changeStatus(User $user)
     {
+        if (Auth::user() == $user) {
+            return back()
+                    ->with(['status' => 'warning', 'msg' => 'Você não pode alterar seu próprio status.']);
+        }
+
         $user->update(['locked' => ! $user->locked]);
 
-        return redirect('/painel/gerenciar-usuarios')
-            ->with(['status' => 'success', 'msg' => 'O status do Usuário: "'.$user->name.'" alterado com sucesso!']);
+        return back()
+                ->with(['status' => 'success', 'msg' => 'O status do Usuário: "'.$user->name.'" alterado com sucesso!']);
     }
 
     /**
@@ -41,9 +47,14 @@ class ManageUsersController extends Controller
      */
     public function destroy(User $user)
     {
+        if (Auth::user() == $user) {
+            return back()
+                ->with(['status' => 'warning', 'msg' => 'Você não pode excluir sua própria conta de usuário.']);
+        }
+
         $user->delete();
 
-        return redirect('/painel/gerenciar-usuarios')
-                    ->with(['status' => 'success', 'msg' => 'O usuário: "'.$user->name.'" foi excluido com sucesso!']);
+        return back()
+                ->with(['status' => 'success', 'msg' => 'O usuário: "'.$user->name.'" foi excluido com sucesso!']);
     }
 }
