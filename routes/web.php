@@ -33,8 +33,8 @@ Route::prefix('painel')->middleware('auth')->group(function () {
         Route::get('/', 'Panel\ManageUsers\ListController@index');
         Route::post('/', 'Panel\ManageUsers\ListController@search');
 
-        Route::get('mostrar/{id}', 'Panel\ManageUsers\ManageUsersController@show');
-        Route::get('alterar-status/{id}', 'Panel\ManageUsers\ManageUsersController@changeStatus');
-        Route::get('excluir/{id}', 'Panel\ManageUsers\ManageUsersController@destroy');
+        Route::get('mostrar/{user}', 'Panel\ManageUsers\ManageUserController@show');
+        Route::get('alterar-status/{user}', 'Panel\ManageUsers\ManageUserController@changeStatus');
+        Route::get('excluir/{user}', 'Panel\ManageUsers\ManageUserController@destroy');
     });
 });
