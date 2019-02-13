@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Panel\ManageUsers;
 
-use Auth;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class ManageUsersController extends Controller
+class ManageUserController extends Controller
 {
     /**
      * Display a listing of the resource.
