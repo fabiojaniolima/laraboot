@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use DateTime;
-use Illuminate\Notifications\Notifiable;
 use App\Notifications\ResetPasswordNotification;
+use DateTime;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {

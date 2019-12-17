@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Panel\ManageUsers;
 
-use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class ManageUserController extends Controller

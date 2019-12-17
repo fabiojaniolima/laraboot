@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Lang;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
 
 class Authenticate extends Middleware
 {

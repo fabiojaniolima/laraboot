@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Panel\ManageUsers;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class ListController extends Controller
 {
