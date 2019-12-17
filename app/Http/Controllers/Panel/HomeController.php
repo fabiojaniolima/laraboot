@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Panel;
 
-use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class HomeController extends Controller
 {
